@@ -1,9 +1,12 @@
 {
   "name": "@pelayomendez/electron-snapsvg-animator",
-  "version": "0.5.0",
+  "version": "0.6.3",
   "description": "This is a Plugin for ease the use of Animate CC exported animated SVG inside electron applications. It makes use of the Snap.svg javascript library and Snap.svg Animator to render content.",
+  "repository": "pelayomendez/electron-snapsvg-animator",
   "main": "snapsvg-animator.js",
-  "dependencies": {
-    "snapsvg-cjs": "0.0.6"
-  }
+  "license": "ISC / MIT",
+  "keywords": [
+    "snapsvg",
+    "electron"
+  ]
 }

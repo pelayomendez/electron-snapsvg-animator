@@ -23,8 +23,20 @@ module.exports =  {
     {
 
         var relativeFilePath = path.resolve(__dirname, filePath)
-        console.log(relativeFilePath)
-        var jsonRaw = require(relativeFilePath)    
+        var jsonRaw = require(relativeFilePath)
+
+        if(document.readyState != 'complete') {
+            window.onload = function() {
+                module.exports.parseAnimationFile(jsonRaw, width, height, fps)
+            }
+        } else {
+            module.exports.parseAnimationFile(jsonRaw, width, height, fps)
+        }
+
+    },
+
+    parseAnimationFile: function(jsonRaw, width, height, fps) {
+
         animationModel = new SVGAnim(jsonRaw, width, height, fps)
         animationNode = animationModel.s.node
         document.body.removeChild(animationNode)

@@ -46,7 +46,7 @@ module.exports =  {
     addAnimation: function(object) 
     {
 
-        domContainer = object
+        domContainer = document.getElementById(object)
         domContainer.appendChild(animationNode)
 
     },

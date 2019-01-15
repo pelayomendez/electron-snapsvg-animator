@@ -14,7 +14,7 @@ Load an exported SVG animation .json file. Expecify FPS, width, height, absolute
 svgAnimationManager.loadAnimation(60, 150, 150, path.resolve(__dirname, 'example_animation.json'))
 ```
 
-Attach the animation to a DOM object.
+Attach the animation to a DOM object by passing it's id tag.
 ```
 svgAnimationManager.addAnimation("div-mainContainer")
 ```
